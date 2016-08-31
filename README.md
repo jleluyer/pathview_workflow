@@ -10,4 +10,5 @@ KO need to be first extracted wsth the software of you choice.
 
 ![oxidative phosphorylation](github.com/jleluyer/pathview_workflow/03_results/oxidative_phosphorylation.png)
 
-![huntington disease](github.com/jleluyer/pathview_workflow/03_results/huntington_disease_enviro.png)
+![huntington disease](https://github.com/jleluyer/pathview_workflow/blob/master/03_results/huntington_disease.png)
+![try](https://github.com/jleluyer/pathview_workflow/03_results/huntington_disease.png)
