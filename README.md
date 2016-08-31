@@ -1,6 +1,6 @@
 # pathview_workflow
 
-Quick workflow for visualization of KEGG pathway using [Pathview[(https://bioconductor.org/packages/release/bioc/html/pathview.html) package in R
+Quick workflow for visualization of KEGG pathway using [Pathview](https://bioconductor.org/packages/release/bioc/html/pathview.html) package in R
 
 ## Extracting KEGG onthology
 
