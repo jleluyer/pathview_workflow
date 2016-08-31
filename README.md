@@ -5,3 +5,9 @@ Quick workflow for visualization of KEGG pathway using [Pathview[(https://biocon
 ## Extracting KEGG onthology
 
 KO need to be first extracted wsth the software of you choice.
+
+## Example output
+
+![oxidative phosphorylation](jleluyer.github.com/pathview_workflow/03_results/oxidative_phosphorylation.png)
+
+![huntington disease](jleluyer.github.com/pathview_workflow/03_results/huntington_disease_enviro.png)
