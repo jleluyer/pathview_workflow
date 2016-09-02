@@ -16,7 +16,6 @@ library(gage)
 library(gageData)
 library(KEGG.db)
 
-setwd("./")
 
 # demo
 data("kegg.sets.ko")
@@ -26,26 +25,18 @@ head(kegg.sets.ko, 3)
 
 #test 
 
-res<-read.table("inpu_file.txt", header=T)
+res<-read.table("02_data/input_file.txt", header=T)
 rownames(res) <- res[,1]
 res[,1]<- NULL
 
-foldchanges = res$log2FoldChange
+foldchanges = res$logFC
 names(foldchanges) = res$entryko
 head(foldchanges)
 
 #get the results
 keggres = gage(foldchanges, gsets=kegg.sets.ko, same.dir=TRUE)
 lapply(keggres, head)
-
 head(keggres$greater)
-#get the pathways
-keggrespathways = data.frame(id=rownames(keggres$greater), keggres$greater) %>% 
-  tbl_df() %>% 
-  filter(row_number()<=5) %>% 
-  .$id %>% 
-  as.character()
-keggrespathways
 
 #plot
 pathview(gene.data=foldchanges, pathway.id="ko04150", species="ko", new.signature=FALSE)
