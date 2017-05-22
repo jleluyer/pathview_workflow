@@ -10,6 +10,7 @@ install.packages("httr")
 library(pathview)
 library('org.Hs.eg.db')
 biocLite("gage")
+library("dplyr")
 biocLite("gageData")
 biocLite("KEGG.db")
 library(gage)
@@ -39,7 +40,8 @@ lapply(keggres, head)
 head(keggres$greater)
 
 #plot
-pathview(gene.data=foldchanges, pathway.id="ko04150", species="ko", new.signature=FALSE)
+#Adapt limit for the limit logFC of your data
+pathview(gene.data=foldchanges, pathway.id="ko04150", species="ko", limit=list(gene=10, cpd=10),bins = list(gene = 10, cpd = 10), species="ko",low = list(gene = "dodgerblue4", cpd = "dodgerblue4"),high = list(gene = "yellow", cpd = "yellow"), new.signature=FALSE)
 
 # Get the IDs.
 keggresids = substr(keggrespathways, start=1, stop=8)
